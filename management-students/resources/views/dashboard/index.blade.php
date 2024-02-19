@@ -1,6 +1,6 @@
 {{-- @dd($jadwalPelajaran) --}}
 {{-- @dd($room) --}}
-{{-- @dd($schedule) --}}
+{{-- @dd($jadwal) --}}
 
 @extends('main.main')
 
@@ -23,19 +23,23 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($jadwalPelajaran as $jadwal)
+            @foreach ($jadwal as $hari)
             <tr>
-                <th>{{ $jadwal->schedule[0]->hari }}</th>
-                @foreach ($jadwal->schedule[0]->course as $item)
-                <td>{{ $item->mata_pelajaran }} <a href="/dashboard/{{ $jadwal->id }}/edit"
-                        class="badge bg-warning border-0"><span data-feather="edit-2"></span></a>
-                    <form action="/dashboard/{{ $jadwal->id }}" method="post" class="d-inline">
+                <th>{{ $hari->hari }}</th>
+                @foreach ($hari->scheduleCourse as $item)
+                {{-- @foreach ($jadwalPelajaran as $pelajaran) --}}
+                    
+                <td>{{ $item->course[0]->mata_pelajaran }} <a href="/dashboard/{{ $item->id }}/edit"
+                    class="badge bg-warning border-0"><span data-feather="edit-2"></span></a>
+                    <form action="/dashboard/{{ $item->id }}" method="post" class="d-inline">
                         @method("delete")
                         @csrf
                         <button class="badge bg-danger border-0" onclick="return confirm('yakin mau dihapus?')"><span
-                                data-feather="x-circle"></span></button>
-                    </form>
-                </td>
+                            data-feather="x-circle"></span></button>
+                        </form>
+                    </td>
+
+                {{-- @endforeach --}}
                 @endforeach
             </tr>
             @endforeach

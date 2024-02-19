@@ -13,7 +13,7 @@
           <label for="kelas" class="form-label">Kelas</label>
           <select class="form-select" name="schedule_id">
             @foreach ($schedules as $item)                
-             <option value="{{ $item->id }}"> Hari {{ $item->hari }}</option>
+             <option value="{{ $item->id }}">Kelas {{ $item->room->kelas }} Hari {{ $item->hari }}</option>
             @endforeach
           </select>
         </div>

@@ -91,68 +91,68 @@ class DatabaseSeeder extends Seeder
         // kelas 7
         Schedule::create([
             "hari" => "Senin",
-            // "room_id" => 1,
+            "room_id" => 1,
         ]);
         Schedule::create([
             "hari" => "Selasa",
-            // "room_id" => 1,
+            "room_id" => 1,
         ]);
         Schedule::create([
             "hari" => "Rabu",
-            // "room_id" => 1,
+            "room_id" => 1,
         ]);
         Schedule::create([
             "hari" => "Kamis",
-            // "room_id" => 1,
+            "room_id" => 1,
         ]);
         Schedule::create([
             "hari" => "Jumat",
-            // "room_id" => 1,
+            "room_id" => 1,
         ]);
 
         // // kelas 8
-        // Schedule::create([
-        //     "hari" => "Senin",
-        //     "room_id" => 2,
-        // ]);
-        // Schedule::create([
-        //     "hari" => "Selasa",
-        //     "room_id" => 2,
-        // ]);
-        // Schedule::create([
-        //     "hari" => "Rabu",
-        //     "room_id" => 2,
-        // ]);
-        // Schedule::create([
-        //     "hari" => "Kamis",
-        //     "room_id" => 2
-        // ]);
-        // Schedule::create([
-        //     "hari" => "Jumat",
-        //     "room_id" => 2,
-        // ]);
+        Schedule::create([
+            "hari" => "Senin",
+            "room_id" => 2,
+        ]);
+        Schedule::create([
+            "hari" => "Selasa",
+            "room_id" => 2,
+        ]);
+        Schedule::create([
+            "hari" => "Rabu",
+            "room_id" => 2,
+        ]);
+        Schedule::create([
+            "hari" => "Kamis",
+            "room_id" => 2
+        ]);
+        Schedule::create([
+            "hari" => "Jumat",
+            "room_id" => 2,
+        ]);
 
         // // kelas 9
-        // Schedule::create([
-        //     "hari" => "Senin",
-        //     "room_id" => 3,
-        // ]);
-        // Schedule::create([
-        //     "hari" => "Selasa",
-        //     "room_id" => 3,
-        // ]);
-        // Schedule::create([
-        //     "hari" => "Rabu",
-        //     "room_id" => 3,
-        // ]);
-        // Schedule::create([
-        //     "hari" => "Kamis",
-        //     "room_id" => 3,
-        // ]);
-        // Schedule::create([
-        //     "hari" => "Jumat",
-        //     "room_id" => 3,
-        // ]);
+        Schedule::create([
+            "hari" => "Senin",
+            "room_id" => 3,
+        ]);
+        Schedule::create([
+            "hari" => "Selasa",
+            "room_id" => 3,
+        ]);
+        Schedule::create([
+            "hari" => "Rabu",
+            "room_id" => 3,
+        ]);
+        Schedule::create([
+            "hari" => "Kamis",
+            "room_id" => 3,
+        ]);
+        Schedule::create([
+            "hari" => "Jumat",
+            "room_id" => 3,
+        ]);
 
         // create data courses
         Course::create([

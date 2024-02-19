@@ -26,8 +26,8 @@ class Schedule extends Model
         return $this->belongsToMany(Course::class, "schedule_courses", "schedule_id", "course_id");
     }
 
-    // public function scheduleCourse():HasMany{
-    //     return $this->hasMany(ScheduleCourse::class);
-    // }
+    public function scheduleCourse():HasMany{
+        return $this->hasMany(ScheduleCourse::class);
+    }
 }
   

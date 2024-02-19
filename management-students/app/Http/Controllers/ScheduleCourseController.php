@@ -24,8 +24,9 @@ class ScheduleCourseController extends Controller
             return view("dashboard.index", [
                 "title" => "Dashboard",
                 "jadwalPelajaran" => $user->room->scheduleCourse,
+                "jadwal" => Schedule::with("scheduleCourse")->where("room_id", auth()->user()->room_id)->get(),
                 // "jadwalPelajaran" => ScheduleCourse::with("schedule")->get(),
-                "schedules" => $user->room->scheduleCourse,
+                // "schedules" => $user->room->scheduleCourse,
                 "room" => Room::where("id", auth()->user()->room_id)->get(),
             ]);
         }

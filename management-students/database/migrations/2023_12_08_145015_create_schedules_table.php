@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('schedules', function (Blueprint $table) {
             $table->id();
-            // $table->foreignId("room_id");
+            $table->foreignId("room_id");
             $table->string("hari");
             $table->timestamps();
         });
